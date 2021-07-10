@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['separation',['separation',['../struct_unity_x_r_next_frame_desc_1_1_unity_x_r_culling_pass.html#ac9d9584d8ab59175f3002bc1566593ad',1,'UnityXRNextFrameDesc::UnityXRCullingPass']]],
+  ['setboundingvolume',['SetBoundingVolume',['../struct_unity_x_r_mesh_provider.html#a596caab1013e642451475f48836c05fa',1,'UnityXRMeshProvider']]],
+  ['setinput',['SetInput',['../struct_i_unity_x_r_audio.html#aae88644d1a4c6b23ebb779afd307bb06',1,'IUnityXRAudio']]],
+  ['setmeshdensity',['SetMeshDensity',['../struct_unity_x_r_mesh_provider.html#a1a4af0f081ea9044164b7495c3e5aebc',1,'UnityXRMeshProvider']]],
+  ['setocclusionmesh',['SetOcclusionMesh',['../struct_i_unity_x_r_display_interface.html#a9d902126379bee4f67e0d428d34ef7b2',1,'IUnityXRDisplayInterface']]],
+  ['setoutput',['SetOutput',['../struct_i_unity_x_r_audio.html#a9fe25f5e53a096a1aa3788d7a29e0edc',1,'IUnityXRAudio']]],
+  ['setstatfloat',['SetStatFloat',['../struct_i_unity_x_r_stats.html#a989c841b9ae30a5791b0f3caee9920e3',1,'IUnityXRStats']]],
+  ['shutdown',['Shutdown',['../struct_unity_lifecycle_provider.html#a8afe9d0a98951600ec7e7de5a70f1b51',1,'UnityLifecycleProvider']]],
+  ['singlepassrendering',['singlePassRendering',['../struct_unity_x_r_frame_setup_hints_1_1_unity_x_r_app_setup.html#a3cf4550e08e8fbd06f9cc5521ea03b25',1,'UnityXRFrameSetupHints::UnityXRAppSetup']]],
+  ['skippresenttomainscreen',['skipPresentToMainScreen',['../struct_unity_x_r_rendering_capabilities.html#a31793c4384115a28baa6a315bd7ce18f',1,'UnityXRRenderingCapabilities']]],
+  ['srcrect',['srcRect',['../struct_unity_x_r_mirror_view_blit_desc_1_1_unity_x_r_blit_params.html#a051f9e88a8f0c4f0bfa86d76e68490ff',1,'UnityXRMirrorViewBlitDesc::UnityXRBlitParams']]],
+  ['srctexarrayslice',['srcTexArraySlice',['../struct_unity_x_r_mirror_view_blit_desc_1_1_unity_x_r_blit_params.html#a0a4172b06e5bb18559d6ff514d5e94c7',1,'UnityXRMirrorViewBlitDesc::UnityXRBlitParams']]],
+  ['srctexid',['srcTexId',['../struct_unity_x_r_mirror_view_blit_desc_1_1_unity_x_r_blit_params.html#a4a1891e9913bc7b965e37604a199fc7e',1,'UnityXRMirrorViewBlitDesc::UnityXRBlitParams']]],
+  ['srgb',['sRGB',['../struct_unity_x_r_frame_setup_hints_1_1_unity_x_r_app_setup.html#ae2606c3f5ea1d31a8686ee72b4c9fae3',1,'UnityXRFrameSetupHints::UnityXRAppSetup']]],
+  ['start',['Start',['../struct_unity_x_r_display_graphics_thread_provider.html#ac6bec0d6850d60f987d3065dad48e5f9',1,'UnityXRDisplayGraphicsThreadProvider::Start()'],['../struct_unity_lifecycle_provider.html#a4a83b34d42fbdca3c9259e9f061625d4',1,'UnityLifecycleProvider::Start()']]],
+  ['stop',['Stop',['../struct_unity_x_r_display_graphics_thread_provider.html#a784c5495920d5e6c04276ba0bfb2d5a1',1,'UnityXRDisplayGraphicsThreadProvider::Stop()'],['../struct_unity_lifecycle_provider.html#af20d92875bfcdf9c01d9e9d595f93a33',1,'UnityLifecycleProvider::Stop()']]],
+  ['submitcurrentframe',['SubmitCurrentFrame',['../struct_unity_x_r_display_graphics_thread_provider.html#aaadb0009a8b19ace2f574fedb0fbc168',1,'UnityXRDisplayGraphicsThreadProvider']]],
+  ['subsystem_5fregister_5fprovider',['SUBSYSTEM_REGISTER_PROVIDER',['../struct_i_unity_subsystem_example_interface.html#a971155664a829032a74912f9a56c2722',1,'IUnitySubsystemExampleInterface::SUBSYSTEM_REGISTER_PROVIDER()'],['../struct_i_unity_x_r_display_interface.html#a98a1cee0ffdbf224e67c09db09971a74',1,'IUnityXRDisplayInterface::SUBSYSTEM_REGISTER_PROVIDER()'],['../struct_i_unity_x_r_display_interface.html#a18a0e520437ccc3729eecfb863411612',1,'IUnityXRDisplayInterface::SUBSYSTEM_REGISTER_PROVIDER()'],['../struct_i_unity_x_r_input_interface.html#a804ca8f54a8743c92c21edd83b5deb98',1,'IUnityXRInputInterface::SUBSYSTEM_REGISTER_PROVIDER()'],['../struct_i_unity_x_r_mesh_interface.html#a6ae27271b837839a866b82bcdf075395',1,'IUnityXRMeshInterface::SUBSYSTEM_REGISTER_PROVIDER()']]],
+  ['supportsbuffer',['supportsBuffer',['../struct_unity_x_r_haptic_capabilities.html#a942781e58355dcf595db1599106a050e',1,'UnityXRHapticCapabilities']]],
+  ['supportsimpulse',['supportsImpulse',['../struct_unity_x_r_haptic_capabilities.html#adfcf00c072229411ec55fb9aadd9fa49',1,'UnityXRHapticCapabilities']]]
+];

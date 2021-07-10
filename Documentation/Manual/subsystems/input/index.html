@@ -1,0 +1,2040 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Manual for native XR APIs">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>XR Input Subsystem - XR SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../img/extra.css">
+    
+      <link rel="stylesheet" href="../../img/toggle.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#xr-input-subsystem" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="XR SDK" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                XR SDK
+              </span>
+              <span class="md-header-nav__topic">
+                XR Input Subsystem
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="XR SDK" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.png" width="48" height="48">
+      
+    </a>
+    XR SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="XR SDK Home" class="md-nav__link">
+      XR SDK Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Interfaces
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Interfaces
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Preinit
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Preinit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/preinit/index.html" title="XR SDK PreInit Interface" class="md-nav__link">
+      XR SDK PreInit Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/preinit/changelog.html" title="PreInit Changelog" class="md-nav__link">
+      PreInit Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/preinit/known-issues.html" title="Known issues" class="md-nav__link">
+      Known issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Stats
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Stats
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/stats/index.html" title="XR SDK stats" class="md-nav__link">
+      XR SDK stats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/stats/changelog.html" title="Stats Changelog" class="md-nav__link">
+      Stats Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/stats/known-issues.html" title="Known issues" class="md-nav__link">
+      Known issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Provider setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Provider setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../provider-setup/provider-setup.html" title="Creating an XR Provider" class="md-nav__link">
+      Creating an XR Provider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../provider-setup/unity-subsystems-manifest-json.html" title="UnitySubsystemsManifest.json" class="md-nav__link">
+      UnitySubsystemsManifest.json
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Runtime discovery
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Runtime discovery
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../runtime-discovery/runtime-discovery.html" title="Runtime discovery and activation of subsystems" class="md-nav__link">
+      Runtime discovery and activation of subsystems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../runtime-discovery/troubleshooting.html" title="Troubleshooting plug-in discovery at runtime" class="md-nav__link">
+      Troubleshooting plug-in discovery at runtime
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Samples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Samples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../samples/samples.html" title="Samples" class="md-nav__link">
+      Samples
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Subsystems
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Subsystems
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Display
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Display
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../display/index.html" title="XR SDK Display subsystem" class="md-nav__link">
+      XR SDK Display subsystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../display/changelog.html" title="Display Changelog" class="md-nav__link">
+      Display Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../display/known-issues.html" title="Known Issues" class="md-nav__link">
+      Known Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2" checked>
+    
+    <label class="md-nav__link" for="nav-6-2">
+      Input
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        Input
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        XR Input Subsystem
+      </label>
+    
+    <a href="index.html" title="XR Input Subsystem" class="md-nav__link md-nav__link--active">
+      XR Input Subsystem
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-quick-steps" title="The Quick Steps" class="md-nav__link">
+    The Quick Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terms" title="Terms" class="md-nav__link">
+    Terms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devices" title="Devices" class="md-nav__link">
+    Devices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature" title="Feature" class="md-nav__link">
+    Feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinternalinputdeviceid" title="UnityXRInternalInputDeviceId" class="md-nav__link">
+    UnityXRInternalInputDeviceId
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-connection-and-disconnection" title="Device Connection and Disconnection" class="md-nav__link">
+    Device Connection and Disconnection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfaceinputsubsystem_deviceconnected" title="IUnityXRInputInterface.InputSubsystem_DeviceConnected" class="md-nav__link">
+    IUnityXRInputInterface.InputSubsystem_DeviceConnected
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfaceinputsubsystem_devicedisconnected" title="IUnityXRInputInterface.InputSubsystem_DeviceDisconnected" class="md-nav__link">
+    IUnityXRInputInterface.InputSubsystem_DeviceDisconnected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-definitions" title="Device Definitions" class="md-nav__link">
+    Device Definitions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-identifying-information" title="Setting Identifying Information" class="md-nav__link">
+    Setting Identifying Information
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_setname" title="IUnityXRInputInterface.DeviceDefinition_SetName" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_SetName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_setcharacteristics" title="IUnityXRInputInterface.DeviceDefinition_SetCharacteristics" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_SetCharacteristics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_setmanufacturer" title="IUnityXRInputInterface.DeviceDefinition_SetManufacturer" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_SetManufacturer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_setserialnumber" title="IUnityXRInputInterface.DeviceDefinition_SetSerialNumber" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_SetSerialNumber
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-features" title="Adding Features" class="md-nav__link">
+    Adding Features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_addfeature" title="IUnityXRInputInterface.DeviceDefinition_AddFeature" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_AddFeature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_addcustomfeature" title="IUnityXRInputInterface.DeviceDefinition_AddCustomFeature" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_AddCustomFeature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_addfeaturewithusage" title="IUnityXRInputInterface.DeviceDefinition_AddFeatureWithUsage" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_AddFeatureWithUsage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_addusageatindex" title="IUnityXRInputInterface.DeviceDefinition_AddUsageAtIndex" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_AddUsageAtIndex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-states" title="Device States" class="md-nav__link">
+    Device States
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-state-update-types" title="Device State Update Types" class="md-nav__link">
+    Device State Update Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-state-functions" title="Device State Functions" class="md-nav__link">
+    Device State Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setcustomvalue" title="IUnityXRInputInterface.DeviceState_SetCustomValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetCustomValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setbinaryvalue" title="IUnityXRInputInterface.DeviceState_SetBinaryValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetBinaryValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setdiscretestatevalue" title="IUnityXRInputInterface.DeviceState_SetDiscreteStateValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetDiscreteStateValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setaxis1dvalue" title="IUnityXRInputInterface.DeviceState_SetAxis1DValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetAxis1DValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setaxis2dvalue" title="IUnityXRInputInterface.DeviceState_SetAxis2DValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetAxis2DValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setaxis3dvalue" title="IUnityXRInputInterface.DeviceState_SetAxis3DValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetAxis3DValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setrotationvalue" title="IUnityXRInputInterface.DeviceState_SetRotationValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetRotationValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setbonevalue" title="IUnityXRInputInterface.DeviceState_SetBoneValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetBoneValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_sethandvalue" title="IUnityXRInputInterface.DeviceState_SetHandValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetHandValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_seteyesvalue" title="IUnityXRInputInterface.DeviceState_SetEyesValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetEyesValue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-specific-structs" title="Feature specific structs" class="md-nav__link">
+    Feature specific structs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unityxrbone" title="UnityXRBone" class="md-nav__link">
+    UnityXRBone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrhand" title="UnityXRHand" class="md-nav__link">
+    UnityXRHand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxreyes" title="UnityXREyes" class="md-nav__link">
+    UnityXREyes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-handling" title="Event Handling" class="md-nav__link">
+    Event Handling
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generic-event" title="Generic Event" class="md-nav__link">
+    Generic Event
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandleevent" title="UnityXRInputProvider.HandleEvent" class="md-nav__link">
+    UnityXRInputProvider.HandleEvent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-origin-events" title="Tracking Origin Events" class="md-nav__link">
+    Tracking Origin Events
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlerecenter" title="UnityXRInputProvider.HandleRecenter" class="md-nav__link">
+    UnityXRInputProvider.HandleRecenter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderquerytrackingoriginmode" title="UnityXRInputProvider.QueryTrackingOriginMode" class="md-nav__link">
+    UnityXRInputProvider.QueryTrackingOriginMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderquerysupportedtrackingoriginmodes" title="UnityXRInputProvider.QuerySupportedTrackingOriginModes" class="md-nav__link">
+    UnityXRInputProvider.QuerySupportedTrackingOriginModes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlesettrackingoriginmode" title="UnityXRInputProvider.HandleSetTrackingOriginMode" class="md-nav__link">
+    UnityXRInputProvider.HandleSetTrackingOriginMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfaceinputsubsystem_trackingoriginupdated" title="IUnityXRInputInterface.InputSubsystem_TrackingOriginUpdated" class="md-nav__link">
+    IUnityXRInputInterface.InputSubsystem_TrackingOriginUpdated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfaceinputsubsystem_settrackingboundary" title="IUnityXRInputInterface.InputSubsystem_SetTrackingBoundary" class="md-nav__link">
+    IUnityXRInputInterface.InputSubsystem_SetTrackingBoundary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haptic-events" title="Haptic Events" class="md-nav__link">
+    Haptic Events
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderqueryhapticcapabilities" title="UnityXRInputProvider.QueryHapticCapabilities" class="md-nav__link">
+    UnityXRInputProvider.QueryHapticCapabilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlehapticimpulse" title="UnityXRInputProvider.HandleHapticImpulse" class="md-nav__link">
+    UnityXRInputProvider.HandleHapticImpulse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlehapticbuffer" title="UnityXRInputProvider.HandleHapticBuffer" class="md-nav__link">
+    UnityXRInputProvider.HandleHapticBuffer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlehapticstop" title="UnityXRInputProvider.HandleHapticStop" class="md-nav__link">
+    UnityXRInputProvider.HandleHapticStop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-usages" title="Feature Usages" class="md-nav__link">
+    Feature Usages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pose-tracking" title="Pose &amp; Tracking" class="md-nav__link">
+    Pose &amp; Tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-information" title="Device Information" class="md-nav__link">
+    Device Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2d-axes" title="2D Axes" class="md-nav__link">
+    2D Axes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1d-axes" title="1D Axes" class="md-nav__link">
+    1D Axes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary" title="Binary" class="md-nav__link">
+    Binary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-based" title="Sensor Based" class="md-nav__link">
+    Sensor Based
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-own-input-provider-checklist" title="Creating your own Input Provider Checklist" class="md-nav__link">
+    Creating your own Input Provider Checklist
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="changelog.html" title="Input Changelog" class="md-nav__link">
+      Input Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="known-issues.html" title="Known Issues" class="md-nav__link">
+      Known Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Meshing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        Meshing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../meshing/index.html" title="XR SDK Meshing subsystem" class="md-nav__link">
+      XR SDK Meshing subsystem
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-quick-steps" title="The Quick Steps" class="md-nav__link">
+    The Quick Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terms" title="Terms" class="md-nav__link">
+    Terms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devices" title="Devices" class="md-nav__link">
+    Devices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature" title="Feature" class="md-nav__link">
+    Feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinternalinputdeviceid" title="UnityXRInternalInputDeviceId" class="md-nav__link">
+    UnityXRInternalInputDeviceId
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-connection-and-disconnection" title="Device Connection and Disconnection" class="md-nav__link">
+    Device Connection and Disconnection
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfaceinputsubsystem_deviceconnected" title="IUnityXRInputInterface.InputSubsystem_DeviceConnected" class="md-nav__link">
+    IUnityXRInputInterface.InputSubsystem_DeviceConnected
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfaceinputsubsystem_devicedisconnected" title="IUnityXRInputInterface.InputSubsystem_DeviceDisconnected" class="md-nav__link">
+    IUnityXRInputInterface.InputSubsystem_DeviceDisconnected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-definitions" title="Device Definitions" class="md-nav__link">
+    Device Definitions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-identifying-information" title="Setting Identifying Information" class="md-nav__link">
+    Setting Identifying Information
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_setname" title="IUnityXRInputInterface.DeviceDefinition_SetName" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_SetName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_setcharacteristics" title="IUnityXRInputInterface.DeviceDefinition_SetCharacteristics" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_SetCharacteristics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_setmanufacturer" title="IUnityXRInputInterface.DeviceDefinition_SetManufacturer" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_SetManufacturer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_setserialnumber" title="IUnityXRInputInterface.DeviceDefinition_SetSerialNumber" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_SetSerialNumber
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-features" title="Adding Features" class="md-nav__link">
+    Adding Features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_addfeature" title="IUnityXRInputInterface.DeviceDefinition_AddFeature" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_AddFeature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_addcustomfeature" title="IUnityXRInputInterface.DeviceDefinition_AddCustomFeature" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_AddCustomFeature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_addfeaturewithusage" title="IUnityXRInputInterface.DeviceDefinition_AddFeatureWithUsage" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_AddFeatureWithUsage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicedefinition_addusageatindex" title="IUnityXRInputInterface.DeviceDefinition_AddUsageAtIndex" class="md-nav__link">
+    IUnityXRInputInterface.DeviceDefinition_AddUsageAtIndex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-states" title="Device States" class="md-nav__link">
+    Device States
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-state-update-types" title="Device State Update Types" class="md-nav__link">
+    Device State Update Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-state-functions" title="Device State Functions" class="md-nav__link">
+    Device State Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setcustomvalue" title="IUnityXRInputInterface.DeviceState_SetCustomValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetCustomValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setbinaryvalue" title="IUnityXRInputInterface.DeviceState_SetBinaryValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetBinaryValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setdiscretestatevalue" title="IUnityXRInputInterface.DeviceState_SetDiscreteStateValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetDiscreteStateValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setaxis1dvalue" title="IUnityXRInputInterface.DeviceState_SetAxis1DValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetAxis1DValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setaxis2dvalue" title="IUnityXRInputInterface.DeviceState_SetAxis2DValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetAxis2DValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setaxis3dvalue" title="IUnityXRInputInterface.DeviceState_SetAxis3DValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetAxis3DValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setrotationvalue" title="IUnityXRInputInterface.DeviceState_SetRotationValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetRotationValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_setbonevalue" title="IUnityXRInputInterface.DeviceState_SetBoneValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetBoneValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_sethandvalue" title="IUnityXRInputInterface.DeviceState_SetHandValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetHandValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfacedevicestate_seteyesvalue" title="IUnityXRInputInterface.DeviceState_SetEyesValue" class="md-nav__link">
+    IUnityXRInputInterface.DeviceState_SetEyesValue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-specific-structs" title="Feature specific structs" class="md-nav__link">
+    Feature specific structs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unityxrbone" title="UnityXRBone" class="md-nav__link">
+    UnityXRBone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrhand" title="UnityXRHand" class="md-nav__link">
+    UnityXRHand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxreyes" title="UnityXREyes" class="md-nav__link">
+    UnityXREyes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#event-handling" title="Event Handling" class="md-nav__link">
+    Event Handling
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generic-event" title="Generic Event" class="md-nav__link">
+    Generic Event
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandleevent" title="UnityXRInputProvider.HandleEvent" class="md-nav__link">
+    UnityXRInputProvider.HandleEvent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-origin-events" title="Tracking Origin Events" class="md-nav__link">
+    Tracking Origin Events
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlerecenter" title="UnityXRInputProvider.HandleRecenter" class="md-nav__link">
+    UnityXRInputProvider.HandleRecenter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderquerytrackingoriginmode" title="UnityXRInputProvider.QueryTrackingOriginMode" class="md-nav__link">
+    UnityXRInputProvider.QueryTrackingOriginMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderquerysupportedtrackingoriginmodes" title="UnityXRInputProvider.QuerySupportedTrackingOriginModes" class="md-nav__link">
+    UnityXRInputProvider.QuerySupportedTrackingOriginModes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlesettrackingoriginmode" title="UnityXRInputProvider.HandleSetTrackingOriginMode" class="md-nav__link">
+    UnityXRInputProvider.HandleSetTrackingOriginMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfaceinputsubsystem_trackingoriginupdated" title="IUnityXRInputInterface.InputSubsystem_TrackingOriginUpdated" class="md-nav__link">
+    IUnityXRInputInterface.InputSubsystem_TrackingOriginUpdated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iunityxrinputinterfaceinputsubsystem_settrackingboundary" title="IUnityXRInputInterface.InputSubsystem_SetTrackingBoundary" class="md-nav__link">
+    IUnityXRInputInterface.InputSubsystem_SetTrackingBoundary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#haptic-events" title="Haptic Events" class="md-nav__link">
+    Haptic Events
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderqueryhapticcapabilities" title="UnityXRInputProvider.QueryHapticCapabilities" class="md-nav__link">
+    UnityXRInputProvider.QueryHapticCapabilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlehapticimpulse" title="UnityXRInputProvider.HandleHapticImpulse" class="md-nav__link">
+    UnityXRInputProvider.HandleHapticImpulse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlehapticbuffer" title="UnityXRInputProvider.HandleHapticBuffer" class="md-nav__link">
+    UnityXRInputProvider.HandleHapticBuffer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityxrinputproviderhandlehapticstop" title="UnityXRInputProvider.HandleHapticStop" class="md-nav__link">
+    UnityXRInputProvider.HandleHapticStop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-usages" title="Feature Usages" class="md-nav__link">
+    Feature Usages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pose-tracking" title="Pose &amp; Tracking" class="md-nav__link">
+    Pose &amp; Tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-information" title="Device Information" class="md-nav__link">
+    Device Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2d-axes" title="2D Axes" class="md-nav__link">
+    2D Axes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1d-axes" title="1D Axes" class="md-nav__link">
+    1D Axes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary" title="Binary" class="md-nav__link">
+    Binary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-based" title="Sensor Based" class="md-nav__link">
+    Sensor Based
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-own-input-provider-checklist" title="Creating your own Input Provider Checklist" class="md-nav__link">
+    Creating your own Input Provider Checklist
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="xr-input-subsystem">XR Input Subsystem<a class="headerlink" href="#xr-input-subsystem" title="Permanent link">&para;</a></h1>
+<p><a href="changelog.html">Changelog</a></p>
+<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p>The XRInputSubsystem is an interface for reporting button, axis, and tracking device information. This is the core subsystem for getting user-controlled data into the various input endpoints of the Unity engine. Unity reports your input information to <a href="https://docs.unity3d.com/2019.1/Documentation/ScriptReference/XR.InputDevices.html">InputDevices</a> and the <a href="https://github.com/Unity-Technologies/InputSystem">Input System</a> depending on the type of information available.</p>
+<h2 id="the-quick-steps">The Quick Steps<a class="headerlink" href="#the-quick-steps" title="Permanent link">&para;</a></h2>
+<p>In order to have a basic, working XR Input provider, you will need to:</p>
+<ol>
+<li><a href="#device-connection-and-disconnection">Report your device connections and disconnections</a></li>
+<li><a href="#filling-device-definitions">Fill in all connected device&rsquo;s definition information</a></li>
+<li><a href="#updating-device-states">Update the device&rsquo;s state whenever requested by Unity</a></li>
+<li><a href="#event-handling">Respond to all relevant events &amp; queries</a></li>
+</ol>
+<h2 id="terms">Terms<a class="headerlink" href="#terms" title="Permanent link">&para;</a></h2>
+<h3 id="devices">Devices<a class="headerlink" href="#devices" title="Permanent link">&para;</a></h3>
+<p>Most Input Subsystem APIs revolve around devices. A device is a container of input features referenced by a unique id of your choosing. This can mean something concrete, like a gamepad or headset, or it can represent abstract objects such as a detected hand skeleton. A device has a fixed number of features that cannot be changed while</p>
+<h3 id="feature">Feature<a class="headerlink" href="#feature" title="Permanent link">&para;</a></h3>
+<p>Input Features are anything we can get sensor or user modified data from. That can be a button, or a positional tracking element, or battery life. They are grouped into various types of data, identified by UnityXRInputFeatureType. These are the currently supported data types that can be on an input device:</p>
+<table>
+<thead>
+<tr>
+<th>UnityXRInputFeatureType</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kUnityXRInputFeatureTypeCustom</td>
+<td>char[] (up to 1024 elements)</td>
+</tr>
+<tr>
+<td>kUnityXRInputFeatureTypeBinary</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>kUnityXRInputFeatureTypeDiscreteStates</td>
+<td>unsigned int</td>
+</tr>
+<tr>
+<td>kUnityXRInputFeatureTypeAxis1D</td>
+<td>float</td>
+</tr>
+<tr>
+<td>kUnityXRInputFeatureTypeAxis2D</td>
+<td>UnityXRVector2</td>
+</tr>
+<tr>
+<td>kUnityXRInputFeatureTypeAxis3D</td>
+<td>UnityXRVector3</td>
+</tr>
+<tr>
+<td>kUnityXRInputFeatureTypeRotation</td>
+<td>UnityXRVector4</td>
+</tr>
+<tr>
+<td>kUnityXRInputFeatureTypeHand</td>
+<td>UnityXRHand</td>
+</tr>
+<tr>
+<td>kUnityXRInputFeatureTypeBone</td>
+<td>UnityXRBone</td>
+</tr>
+<tr>
+<td>kUnityXRInputFeatureTypeEyes</td>
+<td>UnityXREyes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<p>A usage provides context to a feature. It identifies how the feature should be used by the developer. The feature may be a 2D axis, but the usage tells the developer it&rsquo;s a touchpad. It can also inform the developer that a 1-dimensional axis feature is reporting battery life. You can create your own usages, but you need to use as many Unity-developed usages as possible, since they enable cross-platform utility for developers. A list of common, available to all, usages can be found <a href="#feature-usages">here</a>.</p>
+<h3 id="unityxrinternalinputdeviceid">UnityXRInternalInputDeviceId<a class="headerlink" href="#unityxrinternalinputdeviceid" title="Permanent link">&para;</a></h3>
+<p>All devices are identified by a UnityXRInternalInputDeviceId. Consider these identifiers to be unique IDs that both Unity and a provider share to reference a specific device. You define which Ids map to which devices, with the only constraint being that you cannot use the same Id for two devices connected at the same time. Once you report a specific Id as connecting, Unity will request information about what the device is capable of and the current state of that device using that Id, and will send device specific events using that Id.</p>
+<h2 id="device-connection-and-disconnection">Device Connection and Disconnection<a class="headerlink" href="#device-connection-and-disconnection" title="Permanent link">&para;</a></h2>
+<p>Device connection and disconnection is handled through two APIs on the IUnityXRInputInterface:</p>
+<h4 id="iunityxrinputinterfaceinputsubsystem_deviceconnected">IUnityXRInputInterface.InputSubsystem_DeviceConnected<a class="headerlink" href="#iunityxrinputinterfaceinputsubsystem_deviceconnected" title="Permanent link">&para;</a></h4>
+<p>This reports a new device. The supplied <strong>UnityXRInternalInputDeviceId</strong> can be any value the provider wants, so long as it represents an internally unique device and no two devices are connected with the same Id from the same provider. Devices can only be connected between the Start and Stop events of the Input provider&rsquo;s lifecycle. Any device that is already connected when <strong>IUnityXRInputProvider.Start</strong> is called, should be reported during that callback.</p>
+<p>Once a device is reported as connected, we will call <strong>IUnityXRInputProvider.FillDeviceDefinition</strong> on the next input update loop with the supplied <strong>UnityXRInternalInputDeviceId</strong> in order to get specific information about that device.</p>
+<h4 id="iunityxrinputinterfaceinputsubsystem_devicedisconnected">IUnityXRInputInterface.InputSubsystem_DeviceDisconnected<a class="headerlink" href="#iunityxrinputinterfaceinputsubsystem_devicedisconnected" title="Permanent link">&para;</a></h4>
+<p>This reports that an input device is no longer available. You can only report an input device as disconnected after you have already reported it as connected. When you recieve <strong>IUnityXRInputProvider.Stop</strong>, all input devices currently connected must be reported as disconnected.</p>
+<p><em>These two calls are thread safe, and can be called at any time.</em></p>
+<h2 id="device-definitions">Device Definitions<a class="headerlink" href="#device-definitions" title="Permanent link">&para;</a></h2>
+<p>A Device Definition describes the features that your device is capable of reporting to Unity. Features consist of device identifying information, such as the device name, role, manufacturer, and serial number. A Device Definition will also contain an indexed list of all individual input features available to the developer.</p>
+<p>Once a device is reported as being connected, Unity will call your provider via <strong>IUnityXRInputProvider.FillDeviceDefinition</strong>. The <strong>UnityXRInputDeviceDefinition</strong> parameter acts as a handle that can be passed into any functions prefixed with <em>DeviceDefinition</em> on <strong>IUnityXRInputInterface</strong>. Those functions are as follows:</p>
+<h3 id="setting-identifying-information">Setting Identifying Information<a class="headerlink" href="#setting-identifying-information" title="Permanent link">&para;</a></h3>
+<p>Some data on the device is used by developers to indetify specific devices, or the general functionality of a newly connected device.</p>
+<h4 id="iunityxrinputinterfacedevicedefinition_setname">IUnityXRInputInterface.DeviceDefinition_SetName<a class="headerlink" href="#iunityxrinputinterfacedevicedefinition_setname" title="Permanent link">&para;</a></h4>
+<p>This allows the provider to set the device name. The name must be clear and succinct and recognizable by mass market consumers. This should not include the manufacturer’s name. This name is available to developers via <strong>UnityEngine.XR.InputDevice.name</strong> and as <strong>InputDevice.product</strong> in the <em>Input System</em>. This cannot be left blank.</p>
+<h4 id="iunityxrinputinterfacedevicedefinition_setcharacteristics">IUnityXRInputInterface.DeviceDefinition_SetCharacteristics<a class="headerlink" href="#iunityxrinputinterfacedevicedefinition_setcharacteristics" title="Permanent link">&para;</a></h4>
+<p>This allows the provider to specify the type of device that got connected. <strong>UnityXRInputDeviceCharacteristics</strong> are a series of flags that help define what a device is capable of. These change the <em>Input System</em> <em>Usage</em> of the <strong>InputDevice</strong> and </p>
+<h4 id="iunityxrinputinterfacedevicedefinition_setmanufacturer">IUnityXRInputInterface.DeviceDefinition_SetManufacturer<a class="headerlink" href="#iunityxrinputinterfacedevicedefinition_setmanufacturer" title="Permanent link">&para;</a></h4>
+<p>This allows the provider to set the manufacturer of the device. The manufacturer must be clear and succinct and recognizable by mass market consumers. This string is availble to developers via <strong>UnityEngine.XR.InputDevice.manufacturer</strong> and as <strong>InputDevice.manufacturer</strong> in the <em>Input System</em>. This cannot be left blank.</p>
+<h4 id="iunityxrinputinterfacedevicedefinition_setserialnumber">IUnityXRInputInterface.DeviceDefinition_SetSerialNumber<a class="headerlink" href="#iunityxrinputinterfacedevicedefinition_setserialnumber" title="Permanent link">&para;</a></h4>
+<p>This allows the provider to set the serial number of the device. This string is availble to developers via <strong>UnityEngine.XR.InputDevice.serialNumber</strong> and as <strong>InputDevice.serialNumber</strong> in the <em>Input System</em>. This must be an identifier unique to this specific device, or it should be left blank.</p>
+<h3 id="adding-features">Adding Features<a class="headerlink" href="#adding-features" title="Permanent link">&para;</a></h3>
+<p>Input Features can be added to your device definition via a few API calls.</p>
+<h4 id="iunityxrinputinterfacedevicedefinition_addfeature">IUnityXRInputInterface.DeviceDefinition_AddFeature<a class="headerlink" href="#iunityxrinputinterfacedevicedefinition_addfeature" title="Permanent link">&para;</a></h4>
+<p>This adds a feature of a set type (except <strong>kUnityXRInputFeatureTypeCustom</strong>), and returns the <strong>UnityXRInputFeatureIndex</strong> of that new feature.</p>
+<h4 id="iunityxrinputinterfacedevicedefinition_addcustomfeature">IUnityXRInputInterface.DeviceDefinition_AddCustomFeature<a class="headerlink" href="#iunityxrinputinterfacedevicedefinition_addcustomfeature" title="Permanent link">&para;</a></h4>
+<p>This adds a <strong>kUnityXRInputFeatureTypeCustom</strong> feature. These are variable buffers, up to 1024 bytes. These can be used to create custom types, unknown to Unity, and require an explicit size. This function returns the <strong>UnityXRInputFeatureIndex</strong> of that new feature.</p>
+<h4 id="iunityxrinputinterfacedevicedefinition_addfeaturewithusage">IUnityXRInputInterface.DeviceDefinition_AddFeatureWithUsage<a class="headerlink" href="#iunityxrinputinterfacedevicedefinition_addfeaturewithusage" title="Permanent link">&para;</a></h4>
+<p>This adds a feature, but also includes 1 <a href="#feature-usages">feature usage</a>. This function is a helper that combines <strong>DeviceDefinition_AddFeature</strong> and <strong>DeviceDefinition_AddUsageAtIndex</strong>, and returns the <strong>UnityXRInputFeatureIndex</strong> of that new feature.</p>
+<h4 id="iunityxrinputinterfacedevicedefinition_addusageatindex">IUnityXRInputInterface.DeviceDefinition_AddUsageAtIndex<a class="headerlink" href="#iunityxrinputinterfacedevicedefinition_addusageatindex" title="Permanent link">&para;</a></h4>
+<p>This adds a <a href="#feature-usages">feature usage</a> to an existing feature. This takes the <strong>UnityXRInputFeatureIndex</strong> from one of the functions that adds a feature. You can add as many usages to a single feature as required.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Returned <strong>UnityXRInputFeatureIndex</strong> values are all in the sequential order they are added.</p>
+</div>
+<h2 id="device-states">Device States<a class="headerlink" href="#device-states" title="Permanent link">&para;</a></h2>
+<p>Device states are data structures that contain the current state of the device. The structure of the <strong>UnityXRInputDeviceState</strong> is described by the <strong>UnityXRInputDeviceDefinition</strong>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Features contained within the Device State are accessed with a UnityXRInputFeatureIndex as reported when declaring that feature in the Device Definition.</p>
+</div>
+<h3 id="device-state-update-types">Device State Update Types<a class="headerlink" href="#device-state-update-types" title="Permanent link">&para;</a></h3>
+<p>Once a definition is declared, Unity will request device states twice a frame via IUnityXRInputProvider.UpdateDeviceState. The UnityXRInputUpdateType parameter specifies what kind of update Unity is expected:
+<em> <strong>kUnityXRInputUpdateTypeDynamic</strong> is an update before Unity iterates over <strong>MonoBehaviour.Update</strong> calls and coroutine continuations. These should represent where the device currently is. 
+</em> <strong>kUnityXRInputUpdateTypeBeforeRender</strong> is called right before we prepare to render to the headset, and just before <strong>Application.OnBeforeRender</strong> is invoked. These calls should use a forward predicted tracking position, and will represent where you’d like to render the scene at the time it will take to display it.</p>
+<h3 id="device-state-functions">Device State Functions<a class="headerlink" href="#device-state-functions" title="Permanent link">&para;</a></h3>
+<p>The <strong>UnityXRInputDeviceState</strong> parameter acts as a handle that can be passed into any functions prefixed with <em>DeviceState</em> on <strong>IUnityXRInputInterface</strong>. </p>
+<h4 id="iunityxrinputinterfacedevicestate_setcustomvalue">IUnityXRInputInterface.DeviceState_SetCustomValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_setcustomvalue" title="Permanent link">&para;</a></h4>
+<p>This sets a feature of type <strong>kUnityXRInputFeatureTypeCustom</strong> at the supplied <strong>UnityXRInputFeatureIndex</strong>. When setting custom value features, the provider must always set the value with the full size of the declared feature; there is no partial value setting. As well, all custom features must be declared to us during submission with a detailed explanation of what kind of data they contain and why they cannot exist using the other individual feature types.</p>
+<h4 id="iunityxrinputinterfacedevicestate_setbinaryvalue">IUnityXRInputInterface.DeviceState_SetBinaryValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_setbinaryvalue" title="Permanent link">&para;</a></h4>
+<p>This sets a boolean (on/off) feature of type <strong>kUnityXRInputFeatureTypeBinary</strong>. The default, resting, or unused state of this feature must be false.</p>
+<h4 id="iunityxrinputinterfacedevicestate_setdiscretestatevalue">IUnityXRInputInterface.DeviceState_SetDiscreteStateValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_setdiscretestatevalue" title="Permanent link">&para;</a></h4>
+<p>This sets a 32-bit unsigned integer value. This can also be used to represent enumerations. The default, unused value must be 0, and if used for an enumeration, 0 must represent the value of null, none, unset, or invalid.</p>
+<h4 id="iunityxrinputinterfacedevicestate_setaxis1dvalue">IUnityXRInputInterface.DeviceState_SetAxis1DValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_setaxis1dvalue" title="Permanent link">&para;</a></h4>
+<p>This sets a 32-bit floating point value. The default, unused value must be 0.0.</p>
+<h4 id="iunityxrinputinterfacedevicestate_setaxis2dvalue">IUnityXRInputInterface.DeviceState_SetAxis2DValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_setaxis2dvalue" title="Permanent link">&para;</a></h4>
+<p>This sets a value of type <strong>UnityXRVector2</strong>. UnityXRVector2 structures are a pair of (X, Y) 32-bit floats. The default, unused value must be (0.0, 0.0).</p>
+<h4 id="iunityxrinputinterfacedevicestate_setaxis3dvalue">IUnityXRInputInterface.DeviceState_SetAxis3DValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_setaxis3dvalue" title="Permanent link">&para;</a></h4>
+<p>This sets a value of type <strong>UnityXRVector3</strong>. UnityXRVector2 structures are a pair of (X, Y, Z) 32-bit floats. The default, unused value must be (0.0, 0.0, 0.0).</p>
+<h4 id="iunityxrinputinterfacedevicestate_setrotationvalue">IUnityXRInputInterface.DeviceState_SetRotationValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_setrotationvalue" title="Permanent link">&para;</a></h4>
+<p>This sets a value of type <strong>UnityXRVector4</strong>, formatted as a quaternion. The default, unused value must be (0, 0, 0, 1). See the <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html">Unity Script Reference</a> for more details on quaternions.</p>
+<h4 id="iunityxrinputinterfacedevicestate_setbonevalue">IUnityXRInputInterface.DeviceState_SetBoneValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_setbonevalue" title="Permanent link">&para;</a></h4>
+<p>This sets a value of type <strong><a href="#unityxrbone">UnityXRBone</a></strong>.</p>
+<h4 id="iunityxrinputinterfacedevicestate_sethandvalue">IUnityXRInputInterface.DeviceState_SetHandValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_sethandvalue" title="Permanent link">&para;</a></h4>
+<p>This sets a value of type <strong><a href="#unityxrhand">UnityXRHand</a></strong>.</p>
+<h4 id="iunityxrinputinterfacedevicestate_seteyesvalue">IUnityXRInputInterface.DeviceState_SetEyesValue<a class="headerlink" href="#iunityxrinputinterfacedevicestate_seteyesvalue" title="Permanent link">&para;</a></h4>
+<p>This sets a value of type <strong><a href="#unityxreyes">UnityXREyes</a></strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>UnityXRInputFeatureUsageIndex</em> passed in is the same one returned when adding that individual feature to the device definition when filling out the <em>UnityXRInputFeatureDefinition</em>.</p>
+</div>
+<h3 id="feature-specific-structs">Feature specific structs<a class="headerlink" href="#feature-specific-structs" title="Permanent link">&para;</a></h3>
+<p>The following advanced types are special feature types that are used to contain data from multiple data sources.</p>
+<h4 id="unityxrbone">UnityXRBone<a class="headerlink" href="#unityxrbone" title="Permanent link">&para;</a></h4>
+<p>These represent a bone or one element of a hierarchical pose in space. The <em>position</em> member repesents a 3-dimensional position in meters, using left-handed coordinates where Y is up. The <em>rotation</em> member represents an orientation in space for that bone, represented by a normalized quaternion in radians. The <em>parentBoneIndex</em> is a <strong>UnityXRInputFeatureIndex</strong> that must point to the <strong>UnityXRBone</strong> that is upwards in the hierarchy, or <strong>kUnityInvalidXRInputFeatureIndex</strong> if it is the root for this skeleton.</p>
+<h4 id="unityxrhand">UnityXRHand<a class="headerlink" href="#unityxrhand" title="Permanent link">&para;</a></h4>
+<p>These represent a hand-like structure of bones. They organize the bone hierarchy into fingers and root for easy traversal. The <em>rootBoneIndex</em> must always point to a valid index that is of type <strong>kUnityXRInputFeatureTypeBone</strong>, which represents the palm or center of the hand. <em>fingerBoneIndices</em> must be stacked such that the first dimension or the array maps to individual fingers, following <strong>UnityXRHandFinger</strong> enumeration values, and the second dimension of the array are the individual finger bones from root to tip.</p>
+<h4 id="unityxreyes">UnityXREyes<a class="headerlink" href="#unityxreyes" title="Permanent link">&para;</a></h4>
+<p>These represent a pair of eyes, their fixation point, and current blink data. The <em>leftEyePose</em> and <em>rightEyePose</em> are of type <strong>UnityXRPose</strong>, where the <em>position</em> member represents a 3-dimensional position in meters, using left-handed coordinates, where Y is up, and the <em>rotation</em> member represents a normalized quaternion in radians. The <em>fixationPoint</em> represents where the left and right eyes converge, and is also a 3-dimensional position in meters, using left-handed coordinates, where Y is up. The <em>leftOpenAmount</em> and <em>rightOpenAmount</em> represent the openness of the eyes, where 0 is closed, and 1 is fully open. They cannot exceed the [0,1] range.</p>
+<h2 id="event-handling">Event Handling<a class="headerlink" href="#event-handling" title="Permanent link">&para;</a></h2>
+<p>Outside of device state and definition updating, Unity expects you to react and respond to various events.</p>
+<h3 id="generic-event">Generic Event<a class="headerlink" href="#generic-event" title="Permanent link">&para;</a></h3>
+<h4 id="unityxrinputproviderhandleevent">UnityXRInputProvider.HandleEvent<a class="headerlink" href="#unityxrinputproviderhandleevent" title="Permanent link">&para;</a></h4>
+<p>This is for private events, specific to this provider. The <em>eventType</em> parameter is a custom code, used to identify the payload. If the provider does not understand that event, it must return <strong>kUnitySubsystemErrorCodeFailure</strong>.</p>
+<h3 id="tracking-origin-events">Tracking Origin Events<a class="headerlink" href="#tracking-origin-events" title="Permanent link">&para;</a></h3>
+<p>The tracking origin refers to a point in real world space that tracked devices are relative to. It is effectively the point in real world space where a device would report a position of (0, 0, 0). Unity supports a variety of tracking origin modes, and providers can choose to opt into those that they support. The tracking origin modes are listed under <strong>UnityXRInputTrackingOriginModeFlags</strong>. </p>
+<p><strong>kUnityXRInputTrackingOriginModeDevice</strong> places the origin at the primary device’s location and yaw at the time of startup, or at the location of the last <strong>UnityXRInputProvider.HandleRecenter</strong> event.</p>
+<p><strong>kUnityXRInputTrackingOriginModeFloor</strong> places the origin somewhere on the floor. The location on the floor is up to the provider, so long as it let’s the developer understand the height difference between the floor and various devices.</p>
+<p><strong>kUnityXRInputTrackingOriginModeTrackingReference</strong> places the origin at the location of a specific InputDevice with the <strong>kUnityXRInputDeviceCharacteristicsTrackingReference</strong> characteristic. </p>
+<p>Finally, <strong>kUnityXRInputTrackingOriginModeUnknown</strong> is an error case, and should not be returned by the provider. </p>
+<h4 id="unityxrinputproviderhandlerecenter">UnityXRInputProvider.HandleRecenter<a class="headerlink" href="#unityxrinputproviderhandlerecenter" title="Permanent link">&para;</a></h4>
+<p>When the tracking origin mode is set to <strong>kUnityXRInputTrackingOriginModeDevice</strong>, a call to recenter should set the current location of the primary device to be the new origin.</p>
+<h4 id="unityxrinputproviderquerytrackingoriginmode">UnityXRInputProvider.QueryTrackingOriginMode<a class="headerlink" href="#unityxrinputproviderquerytrackingoriginmode" title="Permanent link">&para;</a></h4>
+<p>This is a request from Unity to get the current tracking origin mode being used by the provider. The provider is expected to set the <em>trackingOriginMode</em> parameter and return <em>kUnitySubsystemErrorCodeSuccess</em>. The returned parameter must only be a single flag value.</p>
+<h4 id="unityxrinputproviderquerysupportedtrackingoriginmodes">UnityXRInputProvider.QuerySupportedTrackingOriginModes<a class="headerlink" href="#unityxrinputproviderquerysupportedtrackingoriginmodes" title="Permanent link">&para;</a></h4>
+<p>This is a request for which tracking origin modes are supported. The provider is expected to set the <em>supportedTrackingOriginModes</em> parameter and return <em>kUnitySubsystemErrorCodeSuccess</em>. The returned parameter should be a cumulative list of all <strong>UnityXRInputTrackingOriginModeFlags</strong> that <strong>UnityXRInputProvider.HandleSetTrackingOriginMode</strong> is able to support.</p>
+<h4 id="unityxrinputproviderhandlesettrackingoriginmode">UnityXRInputProvider.HandleSetTrackingOriginMode<a class="headerlink" href="#unityxrinputproviderhandlesettrackingoriginmode" title="Permanent link">&para;</a></h4>
+<p>This is a request from Unity to change the current tracking origin mode. The <em>trackingOriginMode</em> parameter is the desired tracking origin mode. The provider is expected to return <em>kUnitySubsystemErrorCodeSuccess</em> if the origin was able to be changed, and <em>kUnitySubsystemErrorCodeSuccess</em> otherwise. If the tracking origin mode is already the desired mode, the provider should do nothing and return <em>kUnitySubsystemErrorCodeSuccess</em>.</p>
+<h4 id="iunityxrinputinterfaceinputsubsystem_trackingoriginupdated">IUnityXRInputInterface.InputSubsystem_TrackingOriginUpdated<a class="headerlink" href="#iunityxrinputinterfaceinputsubsystem_trackingoriginupdated" title="Permanent link">&para;</a></h4>
+<p>This is an event the provider can send that notifies Unity that the location of the tracking origin has changed. This must be called when <strong>UnityXRInputProvider.HandleSetTrackingOriginMode</strong> succeeds and moves the origin. This can also be called if the provider has had to change the origin due to a change in overall tracking information.</p>
+<h4 id="iunityxrinputinterfaceinputsubsystem_settrackingboundary">IUnityXRInputInterface.InputSubsystem_SetTrackingBoundary<a class="headerlink" href="#iunityxrinputinterfaceinputsubsystem_settrackingboundary" title="Permanent link">&para;</a></h4>
+<p>This is an event the provider can send that notifies Unity that there is a tracking boundary available, or that the tracking boundary has changed. This must be called if there is a boundary, and the tracking origin has changed such that it has moved the relative position of the boundary. This can be called with null, and 0 points in order to remove an existing trackig boundary.</p>
+<h3 id="haptic-events">Haptic Events<a class="headerlink" href="#haptic-events" title="Permanent link">&para;</a></h3>
+<h4 id="unityxrinputproviderqueryhapticcapabilities">UnityXRInputProvider.QueryHapticCapabilities<a class="headerlink" href="#unityxrinputproviderqueryhapticcapabilities" title="Permanent link">&para;</a></h4>
+<p>To be filled in by the provider, this is a request for the haptic capabilities of a given device. Setting <em>supportsImpulse</em> to true will enable events for <strong>UnityXRInputProvider.HandleHapticImpulse</strong>. Setting <em>supportsBuffer</em> to true will enable events for <strong>UnityXRInputProvider.HandleHapticBuffer</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The capabilities structure allows the provider to set the number of channels, and requests to start and stop haptics contain a channel index. This allows the provider to have multiple motors inside of a single device that can be rumbled independently. The first channel should be the most common motor to use, but subsequent ordering is provider-dependent.</p>
+</div>
+<h4 id="unityxrinputproviderhandlehapticimpulse">UnityXRInputProvider.HandleHapticImpulse<a class="headerlink" href="#unityxrinputproviderhandlehapticimpulse" title="Permanent link">&para;</a></h4>
+<p>Data filled in by Unity, this is a request for a device to rumble at a set amplitude, for a set duration. The buffer parameter is of type <strong>UnityXRHapticImpulse</strong>.</p>
+<h4 id="unityxrinputproviderhandlehapticbuffer">UnityXRInputProvider.HandleHapticBuffer<a class="headerlink" href="#unityxrinputproviderhandlehapticbuffer" title="Permanent link">&para;</a></h4>
+<p>Data filled in by Unity, this is a request for a device to rumble a pattern, given a set buffer. The buffer parameter is of type <strong>UnityXRHapticUpdate</strong>.</p>
+<p>The bufferSize will never be more than the <strong>UnityXRHapticCapabilities.bufferMaxSize</strong> returned from the <strong>UnityXRInputProvider.QueryHapticCapabilities</strong> event.</p>
+<h4 id="unityxrinputproviderhandlehapticstop">UnityXRInputProvider.HandleHapticStop<a class="headerlink" href="#unityxrinputproviderhandlehapticstop" title="Permanent link">&para;</a></h4>
+<p>A request from Unity, this is a request for any haptic effects to stop. This should stop either impulse or buffered haptic effects on the supplied <strong>UnityXRInternalInputDeviceId</strong>.</p>
+<h2 id="feature-usages">Feature Usages<a class="headerlink" href="#feature-usages" title="Permanent link">&para;</a></h2>
+<p>Feature usages are simple string tags that provide context about your features, and help Unity developers access your device in a generic way.</p>
+<p>Feature usages are simple string tags that provide context about your features. You can declare your device as having a trigger, a device position, a menu button, or other shared concept of an input feature. Developers can access those and interact with your device without knowing exactly what it is. These are also used to route input data into UnityEngine.Input and UnityEngine.XR.InputTracking and decide on indices. A single input feature can have multiple usages. but each input feature you declare must have at least one usage assigned. If you chose to not use the usages we&rsquo;ve created, you must let us know what you&rsquo;ve used when submitting for certification, and be prepared to update your usage strings based on our feedback.</p>
+<p>All world space usages are in meters, m/s, m/s^2, or radians where appropriate. Space should be oriented as left-handed, z-forward, y-up. The space origin should be the position of the device on connection. This space is your own, and does not map directly into Unity world space.*</p>
+<p>These are the common usages available within Unity:</p>
+<h3 id="pose-tracking">Pose &amp; Tracking<a class="headerlink" href="#pose-tracking" title="Permanent link">&para;</a></h3>
+<p>These features are for devices that supply tracking in the real world.</p>
+<p>These are useful for identifying the current tracking capability:</p>
+<p><strong>kUnityXRInputFeatureUsageIsTracked</strong> is a binary feature that represents if the device is currently tracking properly. True means fully tracked, false means either partially or not tracked.</p>
+<p><strong>kUnityXRInputFeatureUsageTrackingState</strong> is a discrete state feature, backed by the <strong>UnityXRInputTrackingStateFlags</strong> enumeration identifying which actual tracking features are currently available and updating. This value must never be above <strong>kUnityXRInputTrackingStateAll</strong>.</p>
+<p>The remaining tracking features relay individual data about specific &lsquo;nodes&rsquo;, such as the device, left eye, or a colour camera. They are grouped into sets of 6, depending on the type of data. These must be updated in conjuntion with the current value in kUnityXRInputFeatureUsageTrackingState. I.e. if the tracking state says position is available, all position usages must be updating correctly.</p>
+<p>The usage prefixes are as follows:
+<em>kUnityXRInputFeatureUsageDevice</em>, <em>kUnityXRInputFeatureUsageCenterEye</em>, <em>kUnityXRInputFeatureUsageLeftEye</em>, <em>kUnityXRInputFeatureUsageRightEye</em>, <em>kUnityXRInputFeatureUsageColorCamera</em>, and they represent the generalized position of the input device, a centralized average of all eye rendering locations, the rendering location for a left eye, the rendering location for a right eye, and the location of any incoming camera feed, respectively.</p>
+<p>Each of those prefixes has a series of available suffixes that represent various tracking attributes, and are as follows: <em>Position</em>,<em>Rotation</em>,<em>Velocity</em>, <em>AngularVelocity</em>, <em>Acceleration</em>, <em>AngularAcceleration</em>. </p>
+<p>Not including these in the definition means they will never be available. Including them, but tagging them as not available via a <strong>kUnityXRInputFeatureUsageTrackingState</strong> feature means it is just not available currently, but could be available later.</p>
+<h3 id="device-information">Device Information<a class="headerlink" href="#device-information" title="Permanent link">&para;</a></h3>
+<p>These are generalized device information, and not user actuated controls. They are features of the device that the user does not have direct control over.</p>
+<p><strong>kUnityXRInputFeatureUsageBatteryLevel</strong> is a 1D axis feature that represents the current battery level of the device, where 0 is no battery, and 1 is fully charged. It must always be within the [0-1] range.</p>
+<p><strong>kUnityXRInputFeatureUsageUserPresence</strong> is a boolean that returns true when a user is currently wearing the headset.</p>
+<h3 id="2d-axes">2D Axes<a class="headerlink" href="#2d-axes" title="Permanent link">&para;</a></h3>
+<p>These are 2-dimensional analog float values, such as touchpads, and joysticks. Usually moved with the thumb they provide both an X and Y, and should always be in the range of ([-1,1],[-1,1]).</p>
+<p><strong>kUnityXRInputFeatureUsagePrimary2DAxis</strong> is a 2D axis feature that represents a touchpad or joystick. 0,0 is the idle position and Y-positive is away from the controller user.</p>
+<p><strong>kUnityXRInputFeatureUsageSecondary2DAxis</strong> is a 2D axis representing a second joystick or touchpad, used in addition to <strong>kUnityXRInputFeatureUsagePrimary2DAxis</strong>. 0,0 is the idle position and Y-positive is away from the controller user.</p>
+<h3 id="1d-axes">1D Axes<a class="headerlink" href="#1d-axes" title="Permanent link">&para;</a></h3>
+<p>These are all single dimensional, analog float values. Buttons, triggers, and other controls that can be &lsquo;half pressed&rsquo; are identified here.</p>
+<p><strong>kUnityXRInputFeatureUsageTrigger</strong> is a 1D axis that maps to an index-actuated trigger. This must always be within the range of [0,1] where 0 is open and 1 is fully squeezed. If this is implemented, the device must also implement <strong>kUnityXRInputFeatureUsageTriggerButton</strong>.</p>
+<p><strong>kUnityXRInputFeatureUsageGrip</strong> is a 1D axis that maps to a hand squeeze activated grip. This must always be within the range of [0,1] where 0 is open and 1 is fully squeezed. If this is implemented, the device must also implement <strong>kUnityXRInputFeatureUsageGripButton</strong>.</p>
+<h3 id="binary">Binary<a class="headerlink" href="#binary" title="Permanent link">&para;</a></h3>
+<p>These are single dimensional, digital values. They can be actuated or not, but there is no further granularity.</p>
+<p><strong>kUnityXRInputFeatureUsagePrimaryButton</strong> is a binary feature representing the primary button on a controller. This would commonly be used as an accept or advance button in menus. If this is actuated, then <strong>kUnityXRInputFeatureUsagePrimaryTouch</strong> must be actuated as well, if it exists.</p>
+<p><strong>kUnityXRInputFeatureUsagePrimaryTouch</strong> is a binary feature representing the touch state of a primary button on the controller. If this is implemented, the device must implement <strong>kUnityXRInputFeatureUsagePrimaryButton</strong>.</p>
+<p><strong>kUnityXRInputFeatureUsageSecondaryButton</strong> is a binary feature representing the secondary button on a controller. This would commonly be used as a back or alternate button. If this is actuated, then <strong>kUnityXRInputFeatureUsageSecondaryTouch</strong> must be actuated as well if it exists.</p>
+<p><strong>kUnityXRInputFeatureUsageSecondaryTouch</strong> is a binary feature representing the touch state of a secondary button on the controller. If this is implemented, the device must implement <strong>kUnityXRInputFeatureUsageSecondaryButton</strong>.</p>
+<p><strong>kUnityXRInputFeatureUsageGripButton</strong> is a binary feature representing whether a hand-actuated squeeze is triggered. If this is implemented, the device must also implement <strong>kUnityXRInputFeatureUsageGrip</strong>.</p>
+<p><strong>kUnityXRInputFeatureUsageTriggerButton</strong> is a binary feature representing whether a hand-actuated squeeze is triggered. If this is implemented, the device must also implement <strong>kUnityXRInputFeatureUsageTrigger</strong>.</p>
+<p><strong>kUnityXRInputFeatureUsageMenuButton</strong> is a binary feature representing a non-gameplay pause or menu button. This is normally not in easy, common reach.</p>
+<p><strong>kUnityXRInputFeatureUsagePrimary2DAxisClick</strong> is a binary feature representing a depression or click of the <strong>kUnityXRInputFeatureUsagePrimary2DAxis</strong> 2D axis. If this is implemented, the device must implement <strong>kUnityXRInputFeatureUsagePrimary2DAxis</strong>. If this is actuated, then <strong>kUnityXRInputFeatureUsagePrimary2DAxisTouch</strong> must be actuated as well, if it exists.</p>
+<p><strong>kUnityXRInputFeatureUsagePrimary2DAxisTouch</strong> is a binary feature representing a light touch of the <strong>kUnityXRInputFeatureUsagePrimary2DAxis</strong> 2D axis. If this is implemented, the device must implement <strong>kUnityXRInputFeatureUsagePrimary2DAxis</strong>.</p>
+<p><strong>kUnityXRInputFeatureUsageSecondary2DAxisClick</strong> is a binary feature representing a depression or click of the <strong>kUnityXRInputFeatureUsageSecondary2DAxis</strong> 2D axis. If this is implemented, the device must implement <strong>kUnityXRInputFeatureUsageSecondary2DAxis</strong>. If this is actuated, then <strong>kUnityXRInputFeatureUsageSecondary2DAxisTouch</strong> must be actuated as well, if it exists.</p>
+<p><strong>kUnityXRInputFeatureUsageSecondary2DAxisTouch</strong> is a binary feature representing a light touch of the <strong>kUnityXRInputFeatureUsageSecondary2DAxis</strong> 2D axis. If this is implemented, the device must implement <strong>kUnityXRInputFeatureUsageSecondary2DAxis</strong>.</p>
+<h3 id="sensor-based">Sensor Based<a class="headerlink" href="#sensor-based" title="Permanent link">&para;</a></h3>
+<p>These represent individual sensor types. They are used as shorthand to search for hand and eye type data.</p>
+<p><strong>kUnityXRInputFeatureUsageHandData</strong> is a <strong>UnityXRHands</strong> feature, representing hand tracking data.
+<strong>kUnityXRInputFeatureUsageEyesData</strong> is a <strong>UnityXREyes</strong> feature, representing eye tracking data.</p>
+<hr />
+<h2 id="creating-your-own-input-provider-checklist">Creating your own Input Provider Checklist<a class="headerlink" href="#creating-your-own-input-provider-checklist" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Setup Basic Lifecycle Registration<ul>
+<li><em>IUnityXRInputInterface.RegisterLifecycleProvider</em> with function pointers for Initialize, Start, Stop, Shutdown</li>
+<li><em>IUnityXRInputInterface.RegisterInputProvider</em> called from UnityLifecycleProvider.Initialize callback with Input Provider calls filled out.</li>
+</ul>
+</li>
+<li>Call <em>IUnityXRInputInterface.InputSubsystem_DeviceConnected</em> with a unique Id for each connected device.</li>
+<li>Fill out valid device definitions for each device in <em>UnityXRInputProvider.FillDeviceDefinition</em><ul>
+<li>Added a valid name</li>
+<li>Added a valid role</li>
+<li>Added at least one Input Feature.</li>
+</ul>
+</li>
+<li>Update Device State in <em>UnityXRInputProvider.UpdateDeviceState</em> for each connected device.<ul>
+<li>If you can forward predict tracking positions for rendering do so when an update is of type <em>kUnityXRInputUpdateTypeBeforeRender</em></li>
+</ul>
+</li>
+<li>Call <em>IUnityXRInputInterface.InputSubsystem_SetBoundaryPoints</em> with any bounding box.</li>
+<li>Implement <em>UnityXRInputProvider.QueryTrackingOriginMode</em>, <em>UnityXRInputProvider.QuerySupportedTrackingOriginModes</em>, and <em>UnityXRInputProvider.HandleSetTrackingOriginMode</em></li>
+<li>Implement <em>UnityXRInputProvider.TryRecenter</em></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../display/known-issues.html" title="Known Issues" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Known Issues
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="changelog.html" title="Input Changelog" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Input Changelog
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../img/toggle.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

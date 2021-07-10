@@ -1,0 +1,18 @@
+---
+Language: Cpp
+IndentWidth: 4
+UseTab: Never
+BreakBeforeBraces: Allman
+ColumnLimit: 0
+AllowShortIfStatementsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+#IndentCaseLabels: true
+PointerAlignment: Left
+AccessModifierOffset: -4
+BreakConstructorInitializers: BeforeComma
+Cpp11BracedListStyle: true
+AlignAfterOpenBracket: DontAlign
+AlignOperands: false
+IncludeCategories:
+  - Regex: '.*pch.h'
+    Priority: 0

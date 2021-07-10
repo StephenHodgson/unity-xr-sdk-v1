@@ -1,0 +1,14 @@
+{
+    "name": "Unity.XR.SDK.DisplaySample",
+    "references": [
+        "Unity.XR.Management"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

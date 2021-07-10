@@ -1,0 +1,38 @@
+p { font-size: 14px }
+li {font-size: 14px }
+ul {font-size: 14px }
+
+
+.md-typeset dd {
+  margin-top: 2px;
+}
+dl,dt,dd { font-size: 14px; }
+
+#code {font-size: 8px }
+pre {
+    display: block;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    white-space: pre;
+    margin: 1em 0;
+}
+
+.md-typeset img {
+    max-width: 70%;
+}
+
+.md-typeset h1 {
+    margin: 4rem 0 1rem 0;
+}
+
+.md-typeset h1:first-of-type {
+    margin: 0 0 1rem 0;
+}
+
+.return-code {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.return-code-last {
+    margin-bottom: 0em;
+}

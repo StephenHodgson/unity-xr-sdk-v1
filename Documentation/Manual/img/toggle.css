@@ -1,0 +1,12 @@
+.toggler {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.toggler:hover {
+    background-color: #ccc;
+}
+
+.toggler-hidden {
+    display: none;
+}

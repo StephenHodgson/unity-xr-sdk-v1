@@ -1,0 +1,1103 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Manual for native XR APIs">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>XR SDK Meshing subsystem - XR SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../img/extra.css">
+    
+      <link rel="stylesheet" href="../../img/toggle.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#xr-sdk-meshing-subsystem" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="XR SDK" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                XR SDK
+              </span>
+              <span class="md-header-nav__topic">
+                XR SDK Meshing subsystem
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="XR SDK" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.png" width="48" height="48">
+      
+    </a>
+    XR SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="XR SDK Home" class="md-nav__link">
+      XR SDK Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Interfaces
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Interfaces
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Preinit
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Preinit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/preinit/index.html" title="XR SDK PreInit Interface" class="md-nav__link">
+      XR SDK PreInit Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/preinit/changelog.html" title="PreInit Changelog" class="md-nav__link">
+      PreInit Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/preinit/known-issues.html" title="Known issues" class="md-nav__link">
+      Known issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Stats
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Stats
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/stats/index.html" title="XR SDK stats" class="md-nav__link">
+      XR SDK stats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/stats/changelog.html" title="Stats Changelog" class="md-nav__link">
+      Stats Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../interfaces/stats/known-issues.html" title="Known issues" class="md-nav__link">
+      Known issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Provider setup
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Provider setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../provider-setup/provider-setup.html" title="Creating an XR Provider" class="md-nav__link">
+      Creating an XR Provider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../provider-setup/unity-subsystems-manifest-json.html" title="UnitySubsystemsManifest.json" class="md-nav__link">
+      UnitySubsystemsManifest.json
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Runtime discovery
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Runtime discovery
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../runtime-discovery/runtime-discovery.html" title="Runtime discovery and activation of subsystems" class="md-nav__link">
+      Runtime discovery and activation of subsystems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../runtime-discovery/troubleshooting.html" title="Troubleshooting plug-in discovery at runtime" class="md-nav__link">
+      Troubleshooting plug-in discovery at runtime
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Samples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Samples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../samples/samples.html" title="Samples" class="md-nav__link">
+      Samples
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Subsystems
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Subsystems
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Display
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Display
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../display/index.html" title="XR SDK Display subsystem" class="md-nav__link">
+      XR SDK Display subsystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../display/changelog.html" title="Display Changelog" class="md-nav__link">
+      Display Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../display/known-issues.html" title="Known Issues" class="md-nav__link">
+      Known Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      Input
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        Input
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../input/index.html" title="XR Input Subsystem" class="md-nav__link">
+      XR Input Subsystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../input/changelog.html" title="Input Changelog" class="md-nav__link">
+      Input Changelog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../input/known-issues.html" title="Known Issues" class="md-nav__link">
+      Known Issues
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3" checked>
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Meshing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        Meshing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        XR SDK Meshing subsystem
+      </label>
+    
+    <a href="index.html" title="XR SDK Meshing subsystem" class="md-nav__link md-nav__link--active">
+      XR SDK Meshing subsystem
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#control-flow" title="Control flow" class="md-nav__link">
+    Control flow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-meshinfos" title="Getting MeshInfos" class="md-nav__link">
+    Getting MeshInfos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh-generation" title="Mesh generation" class="md-nav__link">
+    Mesh generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-management" title="Memory management" class="md-nav__link">
+    Memory management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity-managed-memory" title="Unity-managed memory" class="md-nav__link">
+    Unity-managed memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provider-managed-memory" title="Provider-managed memory" class="md-nav__link">
+    Provider-managed memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-data" title="User data" class="md-nav__link">
+    User data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-c-component" title="Example C# component" class="md-nav__link">
+    Example C# component
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#control-flow" title="Control flow" class="md-nav__link">
+    Control flow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-meshinfos" title="Getting MeshInfos" class="md-nav__link">
+    Getting MeshInfos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh-generation" title="Mesh generation" class="md-nav__link">
+    Mesh generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-management" title="Memory management" class="md-nav__link">
+    Memory management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity-managed-memory" title="Unity-managed memory" class="md-nav__link">
+    Unity-managed memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provider-managed-memory" title="Provider-managed memory" class="md-nav__link">
+    Provider-managed memory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-data" title="User data" class="md-nav__link">
+    User data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-c-component" title="Example C# component" class="md-nav__link">
+    Example C# component
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="xr-sdk-meshing-subsystem">XR SDK Meshing subsystem<a class="headerlink" href="#xr-sdk-meshing-subsystem" title="Permanent link">&para;</a></h1>
+<p>The Meshing subsystem extracts mesh data from an external Provider and converts it to a <a href="https://docs.unity3d.com/ScriptReference/Mesh.html">UnityEngine.Mesh</a>. It can also generate an optional <a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html">UnityEngine.MeshCollider</a> without incurring any main thread stalls.</p>
+<p>The main use case for the Meshing subsystem is to surface procedurally-generated meshes, generally from some sort of spatial mapping algorithm like the one generated from a depth camera. There is no limit on the size of the mesh, or the frequency of updates.</p>
+<p>Mesh generation occurs asynchronously on a background thread, so extracting data from an external provider doesn&rsquo;t block the main thread to, for example, bake the mesh collider.</p>
+<h2 id="control-flow">Control flow<a class="headerlink" href="#control-flow" title="Permanent link">&para;</a></h2>
+<p>The Meshing subsystem has two basic queries:</p>
+<ul>
+<li>Get the state of all tracked meshes (for example, New, Changed, Unchanged, Removed).</li>
+<li>Generate a particular mesh. Meshes are identified using the <a href="https://docs.unity3d.com/ScriptReference/Experimental.XR.TrackableId.html">TrackableId</a> identifier.</li>
+</ul>
+<h3 id="getting-meshinfos">Getting MeshInfos<a class="headerlink" href="#getting-meshinfos" title="Permanent link">&para;</a></h3>
+<p>C# users can get the mesh infos from the <code>XRMeshSubsystem</code> instance method:</p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="kt">bool</span> <span class="nf">TryGetMeshInfos</span><span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="n">MeshInfo</span><span class="p">&gt;</span> <span class="n">meshInfosOut</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This maps directly to the C call to <code>UnityXRMeshProvider::GetMeshInfos</code> and is typically called once per frame to obtain the current list of tracked meshes.</p>
+<p>The following C implementation can use the provided <code>allocator</code> object to allocate an array of <code>UnityXRMeshInfo</code>s which it should then fill out:</p>
+<div class="codehilite"><pre><span></span><span class="n">UnitySubsystemErrorCode</span><span class="p">(</span><span class="n">UNITY_INTERFACE_API</span> <span class="o">*</span> <span class="n">GetMeshInfos</span><span class="p">)(</span>
+        <span class="n">UnitySubsystemHandle</span> <span class="n">handle</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">pluginData</span><span class="p">,</span> <span class="n">UnityXRMeshInfoAllocator</span> <span class="o">*</span> <span class="n">allocator</span><span class="p">);</span>
+</pre></div>
+
+
+<p>The allocated memory is owned by Unity (typically using a stack allocator, so allocations are very fast):</p>
+<div class="codehilite"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="n">UnityXRMeshInfo</span>
+<span class="p">{</span>
+    <span class="n">UnityXRTrackableId</span> <span class="n">meshId</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">updated</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">priorityHint</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">UnityXRMeshInfo</span><span class="p">;</span>
+</pre></div>
+
+
+<p>If nothing has changed since the last call to <code>TryGetMeshInfos</code>, you can return false to avoid filling out the array each frame.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Field</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>meshId</strong></td>
+<td>A 128-bit unique identifier. The Provider generates these values, which can be a pointer to mesh data, but you need to be able to generate a specific mesh by its id.</td>
+</tr>
+<tr>
+<td><strong>updated</strong></td>
+<td>The only state Unity needs is whether the mesh has been updated since the last time it was generated. Determining whether the mesh was added or removed is done automatically; reporting the existence of a mesh that Unity doesn&rsquo;t know about will be surfaced as Added, while not reporting a mesh that was previously reported will mark the mesh as Removed.</td>
+</tr>
+<tr>
+<td><strong>priorityHint</strong></td>
+<td>C# to interprets this value, but you might want to, for example, provide a C# component that prioritizes which mesh to generate based it. Unity doesn&rsquo;t use this value.</td>
+</tr>
+</tbody>
+</table>
+<p>In C#, <code>TryGetMeshInfos</code> populates a <code>List&lt;MeshInfo&gt;</code>, which includes the mesh state:</p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">enum</span> <span class="n">MeshChangeState</span>
+<span class="p">{</span>
+    <span class="n">Added</span><span class="p">,</span>
+    <span class="n">Updated</span><span class="p">,</span>
+    <span class="n">Removed</span><span class="p">,</span>
+    <span class="n">Unchanged</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Based on the mesh change state and the priority hint value, a C# component can then decide which mesh(es) to generate next.</p>
+<h3 id="mesh-generation">Mesh generation<a class="headerlink" href="#mesh-generation" title="Permanent link">&para;</a></h3>
+<p>From C#, you can generate a specific mesh asynchronously using the <code>XRMeshSubsystem</code> instance method:</p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">extern</span> <span class="k">void</span> <span class="nf">GenerateMeshAsync</span><span class="p">(</span>
+    <span class="n">TrackableId</span> <span class="n">meshId</span><span class="p">,</span>
+    <span class="n">Mesh</span> <span class="n">mesh</span><span class="p">,</span>
+    <span class="n">MeshCollider</span> <span class="n">meshCollider</span><span class="p">,</span>
+    <span class="n">MeshVertexAttributes</span> <span class="n">attributes</span><span class="p">,</span>
+    <span class="n">Action</span><span class="p">&lt;</span><span class="n">MeshGenerationResult</span><span class="p">&gt;</span> <span class="n">onMeshGenerationComplete</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This enqueues a mesh for generation. You can enqueue as many meshes as you need, but you might want to limit the number of meshes that are concurrently generated to a few at a time.</p>
+<p>Unity will always call the provided <code>onMeshGenerationComplete</code> delegate will always be called, even if an error occurs.</p>
+<p>Meshes are generated in two phases, following an acquire and release model:</p>
+<p><img alt="" src="acquire_release.png" /></p>
+<div class="codehilite"><pre><span></span><span class="n">UnitySubsystemErrorCode</span><span class="p">(</span><span class="n">UNITY_INTERFACE_API</span> <span class="o">*</span> <span class="n">AcquireMesh</span><span class="p">)(</span>
+    <span class="n">UnitySubsystemHandle</span> <span class="n">handle</span><span class="p">,</span>
+    <span class="kt">void</span><span class="o">*</span> <span class="n">pluginData</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">UnityXRTrackableId</span> <span class="o">*</span> <span class="n">meshId</span><span class="p">,</span>
+    <span class="n">UnityXRMeshDataAllocator</span> <span class="o">*</span> <span class="n">allocator</span><span class="p">);</span>
+</pre></div>
+
+
+<p><code>AcquireMesh</code> is called on a background thread, so you can do as much processing in this method as you like, including computationally-intensive work such as generating the mesh itself. This function can return immediately or span several frames.</p>
+<p>If you provide a <code>MeshCollider</code> to <code>GenerateMeshAsync</code>, Unity also computes the MeshCollider&rsquo;s acceleration structure (&ldquo;Bake Physics&rdquo; in the above diagram). This can be time-consuming for large meshes, so it also occurs on the worker thread.</p>
+<p>Finally, when the data is ready, Unity writes it to the <code>UnityEngine.Mesh</code> and/or <code>UnityEngine.MeshCollider</code> on the main thread. Afterwards, <code>ReleaseMesh</code> is called, also on the main thread:</p>
+<div class="codehilite"><pre><span></span><span class="n">UnitySubsystemErrorCode</span><span class="p">(</span><span class="n">UNITY_INTERFACE_API</span> <span class="o">*</span> <span class="n">ReleaseMesh</span><span class="p">)(</span>
+    <span class="n">UnitySubsystemHandle</span> <span class="n">handle</span><span class="p">,</span>
+    <span class="kt">void</span><span class="o">*</span> <span class="n">pluginData</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">UnityXRTrackableId</span> <span class="o">*</span> <span class="n">meshId</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">UnityXRMeshDescriptor</span> <span class="o">*</span> <span class="n">mesh</span><span class="p">,</span>
+    <span class="kt">void</span><span class="o">*</span> <span class="n">userData</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Since <code>ReleaseMesh</code> is called on the main thread, it should return quickly. Typically, this is used to free resources allocated during <code>AcquireMesh</code>.</p>
+<h3 id="memory-management">Memory management<a class="headerlink" href="#memory-management" title="Permanent link">&para;</a></h3>
+<p><code>AcquireMesh</code> offers two means of providing mesh data to Unity: Unity-managed and Provider-managed.</p>
+<h4 id="unity-managed-memory">Unity-managed memory<a class="headerlink" href="#unity-managed-memory" title="Permanent link">&para;</a></h4>
+<p>To let Unity manage the memory, use:</p>
+<div class="codehilite"><pre><span></span><span class="n">UnityXRMeshDescriptor</span><span class="o">*</span> <span class="p">(</span><span class="n">UNITY_INTERFACE_API</span> <span class="o">*</span> <span class="n">MeshDataAllocator_AllocateMesh</span><span class="p">)(</span>
+    <span class="n">UnityXRMeshDataAllocator</span> <span class="o">*</span> <span class="n">allocator</span><span class="p">,</span>
+    <span class="kt">size_t</span> <span class="n">vertexCount</span><span class="p">,</span>
+    <span class="kt">size_t</span> <span class="n">indexCount</span><span class="p">,</span>
+    <span class="n">UnityXRIndexFormat</span> <span class="n">indexFormat</span><span class="p">,</span>
+    <span class="n">UnityXRMeshVertexAttributeFlags</span> <span class="n">attributes</span><span class="p">,</span>
+    <span class="n">UnityXRMeshTopology</span> <span class="n">topology</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This returns a struct with pointers to buffers based on an intersection of these <code>attributes</code> and the vertex attributes requested from C#. The Provider should then copy the appropriate data to the buffers.</p>
+<p>When you use this paradigm, you don&rsquo;t have to free the memory, because Unity will recycle the memory after the call to <code>ReleaseMesh</code>.</p>
+<h4 id="provider-managed-memory">Provider-managed memory<a class="headerlink" href="#provider-managed-memory" title="Permanent link">&para;</a></h4>
+<p>Instead of letting Unity manage the memory, you can point it at your own data. The data must remain valid until <code>ReleaseMesh</code> is called.</p>
+<p>Use <code>MeshDataAllocator_SetMesh</code> to provide your own <code>UnityXRMeshDescriptor</code> whose non-null pointers point to valid data:</p>
+<div class="codehilite"><pre><span></span><span class="kt">void</span><span class="p">(</span><span class="n">UNITY_INTERFACE_API</span> <span class="o">*</span> <span class="n">MeshDataAllocator_SetMesh</span><span class="p">)(</span>
+    <span class="n">UnityXRMeshDataAllocator</span> <span class="o">*</span> <span class="n">allocator</span><span class="p">,</span> <span class="k">const</span> <span class="n">UnityXRMeshDescriptor</span> <span class="o">*</span> <span class="n">meshDescriptor</span><span class="p">);</span>
+</pre></div>
+
+
+<h4 id="user-data">User data<a class="headerlink" href="#user-data" title="Permanent link">&para;</a></h4>
+<p>Your <code>AcquireMesh</code> implementation can call:</p>
+<div class="codehilite"><pre><span></span><span class="kt">void</span><span class="p">(</span><span class="n">UNITY_INTERFACE_API</span> <span class="o">*</span> <span class="n">MeshDataAllocator_SetUserData</span><span class="p">)(</span>
+    <span class="n">UnityXRMeshDataAllocator</span> <span class="o">*</span> <span class="n">allocator</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">userData</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Unity will pass the <code>userData</code> pointer back to your <code>ReleaseMesh</code> implementation. This is particularly useful when you&rsquo;re using Provider-managed memory.</p>
+<h2 id="example-c-component">Example C# component<a class="headerlink" href="#example-c-component" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">void</span> <span class="nf">Update</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">s_MeshSubsystem</span><span class="p">.</span><span class="n">TryGetMeshInfos</span><span class="p">(</span><span class="n">s_MeshInfos</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">meshInfo</span> <span class="k">in</span> <span class="n">s_MeshInfos</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">switch</span> <span class="p">(</span><span class="n">meshInfo</span><span class="p">.</span><span class="n">ChangeState</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">case</span> <span class="n">MeshChangeState</span><span class="p">.</span><span class="n">Added</span><span class="p">:</span>
+                <span class="k">case</span> <span class="n">MeshChangeState</span><span class="p">.</span><span class="n">Updated</span><span class="p">:</span>
+                    <span class="n">AddToQueueIfNecessary</span><span class="p">(</span><span class="n">meshInfo</span><span class="p">);</span>
+                    <span class="k">break</span><span class="p">;</span>
+
+                <span class="k">case</span> <span class="n">MeshChangeState</span><span class="p">.</span><span class="n">Removed</span><span class="p">:</span>
+                    <span class="n">RaiseMeshRemoved</span><span class="p">(</span><span class="n">meshInfo</span><span class="p">.</span><span class="n">MeshId</span><span class="p">);</span>
+
+                    <span class="c1">// Remove from processing queue</span>
+                    <span class="n">m_MeshesNeedingGeneration</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">meshInfo</span><span class="p">.</span><span class="n">MeshId</span><span class="p">);</span>
+
+                    <span class="c1">// Destroy the GameObject</span>
+                    <span class="n">GameObject</span> <span class="n">meshGameObject</span><span class="p">;</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">meshIdToGameObjectMap</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="n">meshInfo</span><span class="p">.</span><span class="n">MeshId</span><span class="p">,</span> <span class="k">out</span> <span class="n">meshGameObject</span><span class="p">))</span>
+                    <span class="p">{</span>
+                        <span class="n">Destroy</span><span class="p">(</span><span class="n">meshGameObject</span><span class="p">);</span>
+                        <span class="n">meshIdToGameObjectMap</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">meshInfo</span><span class="p">.</span><span class="n">MeshId</span><span class="p">);</span>
+                    <span class="p">}</span>
+
+                    <span class="k">break</span><span class="p">;</span>
+
+                <span class="k">default</span><span class="p">:</span>
+                    <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// ...</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">m_MeshesBeingGenerated</span><span class="p">.</span><span class="n">Count</span> <span class="p">&lt;</span> <span class="n">meshQueueSize</span> <span class="p">&amp;&amp;</span> <span class="n">m_MeshesNeedingGeneration</span><span class="p">.</span><span class="n">Count</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Get the next mesh to generate. Could be based on the mesh&#39;s</span>
+        <span class="c1">// priorityHint, whether it is new vs updated, etc.</span>
+        <span class="kt">var</span> <span class="n">meshId</span> <span class="p">=</span> <span class="n">GetNextMeshToGenerate</span><span class="p">();</span>
+
+        <span class="c1">// Gather the necessary Unity objects for the generation request</span>
+        <span class="kt">var</span> <span class="n">meshGameObject</span> <span class="p">=</span> <span class="n">GetOrCreateGameObjectForMesh</span><span class="p">(</span><span class="n">meshId</span><span class="p">);</span>
+        <span class="kt">var</span> <span class="n">meshCollider</span> <span class="p">=</span> <span class="n">meshGameObject</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">MeshCollider</span><span class="p">&gt;();</span>
+        <span class="kt">var</span> <span class="n">mesh</span> <span class="p">=</span> <span class="n">meshGameObject</span><span class="p">.</span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">MeshFilter</span><span class="p">&gt;().</span><span class="n">mesh</span><span class="p">;</span>
+        <span class="kt">var</span> <span class="n">meshAttributes</span> <span class="p">=</span> <span class="n">shouldComputeNormals</span> <span class="p">?</span> <span class="n">MeshVertexAttributes</span><span class="p">.</span><span class="n">Normals</span> <span class="p">:</span> <span class="n">MeshVertexAttributes</span><span class="p">.</span><span class="n">None</span><span class="p">;</span>
+
+        <span class="c1">// Request generation</span>
+        <span class="n">s_MeshSubsystem</span><span class="p">.</span><span class="n">GenerateMeshAsync</span><span class="p">(</span><span class="n">meshId</span><span class="p">,</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">meshCollider</span><span class="p">,</span> <span class="n">meshAttributes</span><span class="p">,</span> <span class="n">OnMeshGenerated</span><span class="p">);</span>
+
+        <span class="c1">// Update internal state</span>
+        <span class="n">m_MeshesBeingGenerated</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">meshId</span><span class="p">,</span> <span class="n">m_MeshesNeedingGeneration</span><span class="p">[</span><span class="n">meshId</span><span class="p">]);</span>
+        <span class="n">m_MeshesNeedingGeneration</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">meshId</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">void</span> <span class="nf">OnMeshGenerated</span><span class="p">(</span><span class="n">MeshGenerationResult</span> <span class="n">result</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">Status</span> <span class="p">!=</span> <span class="n">MeshGenerationStatus</span><span class="p">.</span><span class="n">Success</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Handle error, regenerate, etc.</span>
+    <span class="p">}</span>
+
+    <span class="n">m_MeshesBeingGenerated</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">MeshId</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../input/known-issues.html" title="Known Issues" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Known Issues
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../img/toggle.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
